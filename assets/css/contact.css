@@ -1,0 +1,7 @@
+
+/* Contact page styles */
+.contact-form{ display:grid; gap:14px; max-width: 720px; }
+.contact-form input, .contact-form textarea{
+  width:100%; padding:12px 14px; border-radius:12px; border:1px solid #cbd6f7; background:#f7faff;
+}
+.contact-form button{ align-self:start; }
