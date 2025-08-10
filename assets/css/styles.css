@@ -29,47 +29,74 @@ body{
 }
 
 /* ===== Sticky Header (boxy, larger, fades on scroll) ===== */
-.site-header{
-  position:sticky; top:0; z-index:1000;
-  background: rgba(14,23,38,0.35); /* starts translucent */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--brand-blue); /* start with blue */
   backdrop-filter: saturate(120%) blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  transition: background-color .25s ease, box-shadow .25s ease, border-color .25s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
-.site-header.is-solid{
-  background: var(--brand-blue);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-}
-.header-inner{
-  max-width: 1200px; margin: 0 auto; padding: 18px 20px;
-  display:flex; align-items:center; justify-content:space-between;
-}
-.logo{
-  display:flex; align-items:center; gap:12px; text-decoration:none;
-  color:#fff;
-}
-.logo img{ height:40px; width:auto; display:block; }
-.logo .brand{ font-weight:700; font-size:1.15rem; letter-spacing:.3px; }
 
-.nav{
-  display:flex; align-items:center; gap:10px;
+.site-header.is-solid {
+  background: rgba(34, 78, 155, 0.95); /* more opaque blue on scroll */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
-.nav a{
-  position:relative;
-  display:inline-block; padding:10px 14px; border-radius:12px;
-  color:#e9f0ff; text-decoration:none; font-weight:600; letter-spacing:.2px;
-  transition: transform .18s ease, background-color .18s ease, color .18s ease;
-}
-.nav a:hover{ background: rgba(255,255,255,0.14); transform: translateY(-1px); }
 
-/* Prominent Investor Services button */
-.btn-investor{
-  padding:10px 16px; border-radius:14px;
-  background:#fff; color:var(--brand-blue);
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 60px; /* larger logo */
+  width: auto;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  color: #e9f0ff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+/* High contrast Investor Services button */
+.btn-investor {
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: var(--brand-accent);
+  color: #0b1a33;
+  font-weight: 700;
   box-shadow: var(--shadow);
-  border: 2px solid rgba(255,255,255,0.8);
+  border: 2px solid rgba(255, 255, 255, 0.8);
 }
-.btn-investor:hover{ background: #f7fbff; color: var(--brand-blue-2); }
+
+.btn-investor:hover {
+  background: #fff;
+  color: var(--brand-blue);
+}
 
 /* ===== Generic Section & Layout ===== */
 .section{
