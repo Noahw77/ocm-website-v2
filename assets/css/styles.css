@@ -116,35 +116,46 @@ body{
   padding: 28px;
 }
 
-/* ===== Hero (shared baseline) ===== */
+/* ===== Hero (image darkened, text stays bright) ===== */
 .hero{
-  position:relative; min-height: 64vh; display:grid; place-items:center;
-  color:#fff; overflow:hidden;
+  position: relative;
+  min-height: 64vh;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  overflow: hidden;
 }
-.hero img.bg{
-  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
-  filter: grayscale(10%);
-}
-.hero::after{
-  content:""; position:absolute; inset:0;
-  background: linear-gradient(180deg, rgba(11,21,41,.65), rgba(11,21,41,.65));
-}
-.hero-content{
-  position:relative; text-align:center; padding:20px; max-width: 900px;
-}
-.hero h1{ font-size: clamp(2rem, 1.6rem + 2vw, 3rem); margin:0 0 10px; }
-.hero p{ font-size: clamp(1rem, .9rem + .6vw, 1.25rem); opacity:.95; }
 
-.hero .cta-row{ margin-top:22px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-.button{
-  display:inline-block; text-decoration:none; font-weight:700;
-  padding:12px 18px; border-radius:14px; border:2px solid transparent;
-  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+.hero img.bg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(10%); /* keep if you like the tone */
+  z-index: 0;             /* image at the back */
 }
-.button.primary{ background: var(--brand-accent); color:#0b1a33; }
-.button.primary:hover{ transform: translateY(-1px); box-shadow: 0 10px 20px rgba(110,168,254,.25); }
-.button.ghost{ background: transparent; color:#fff; border-color: rgba(255,255,255,.8); }
-.button.ghost:hover{ background: rgba(255,255,255,.1); }
+
+.hero::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11,21,41,.65), rgba(11,21,41,.65));
+  z-index: 1;             /* overlay between image and text */
+  pointer-events: none;
+}
+
+.hero-content{
+  position: relative;
+  z-index: 2;             /* text above the overlay */
+  text-align: center;
+  padding: 20px;
+  max-width: 900px;
+}
+
+.hero h1{ font-size: clamp(2rem, 1.6rem + 2vw, 3rem); margin: 0 0 10px; }
+.hero p{ font-size: clamp(1rem, .9rem + .6vw, 1.25rem); opacity: .95; }
+.hero .cta-row{ margin-top: 22px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
 /* ===== Footer ===== */
 .site-footer{
