@@ -1,5 +1,0 @@
-
-/* Leadership page styles */
-.bio{ display:grid; grid-template-columns: 320px 1fr; gap:24px; align-items:start; }
-.bio .portrait{ width:100%; height:auto; border-radius: 16px; box-shadow: var(--shadow); }
-@media (max-width: 900px){ .bio{ grid-template-columns: 1fr; } }

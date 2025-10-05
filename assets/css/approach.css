@@ -1,5 +1,0 @@
-
-/* Approach page styles */
-.method-tiles{ display:grid; grid-template-columns: repeat(3,1fr); gap:18px; }
-.method-tiles .tile{ background: var(--card); border-radius: var(--radius-xl); padding:20px; box-shadow: var(--shadow); }
-@media (max-width: 900px){ .method-tiles{ grid-template-columns: 1fr; } }

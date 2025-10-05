@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ · Ochoco Capital Management</title>
+  <!-- Keep your existing main CSS, then add the OCM additive CSS after it -->
+  <link rel="stylesheet" href="/assets/css/ocm-additions.css" />
+</head>
+<body>
+  
+<!-- Reusable Header -->
+<header class="ocm-header" role="banner">
+  <div class="ocm-brand">
+    <!-- Update logo src to your actual logo path -->
+    <a href="/index.html" aria-label="Ochoco Capital Management Home">
+      <img src="/assets/img/logo.svg" alt="Ochoco Capital Management logo" />
+    </a>
+  </div>
+
+  <nav class="ocm-nav" role="navigation" aria-label="Primary">
+    <div class="ocm-nav-main">
+      <a href="/index.html">Home</a>
+      <a href="/leadership.html">Leadership</a>
+      <a href="/approach.html">Approach</a>
+      <a href="/philosophy.html">Philosophy</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div class="ocm-nav-cta">
+      <a
+        class="ocm-external"
+        href="https://portal.navconsulting.net/" 
+        target="_blank" rel="noopener"
+        aria-label="Investor Services (opens in new tab)"
+        >
+        Investor Services
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+</header>
+
+  <main>
+    
+    <section class="ocm-section ocm-light">
+
+  <h2>FAQ</h2>
+  <details>
+    <summary>What is OCM’s investment style?</summary>
+    <p>Long-only, concentrated, fundamentals-driven.</p>
+  </details>
+  <details>
+    <summary>What fees apply?</summary>
+    <p>No management fee; performance fee subject to a high-water mark.</p>
+  </details>
+  <details>
+    <summary>How liquid is the fund?</summary>
+    <p>As disclosed in offering documents. (Initial lock-up as currently stated.)</p>
+  </details>
+  
+</section>
+  </main>
+  
+<!-- Reusable Footer -->
+<footer class="ocm-footer" role="contentinfo">
+  <p>&copy; <span id="ocm-year"></span> Ochoco Capital Management. All rights reserved.</p>
+  <script>
+    document.getElementById('ocm-year').textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+</body>
+</html>
