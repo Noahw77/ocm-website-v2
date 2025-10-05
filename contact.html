@@ -12,7 +12,7 @@
   <div class="container header-inner">
     <div class="brand">
       <a href="./index.html" aria-label="Ochoco Capital Management Home">
-        <img src="./assets/img/logo.svg" alt="Ochoco Capital Management logo" />
+        <img src="./assets/img/logo.svg" alt="Ochoco Capital Management logo">
       </a>
     </div>
     <nav class="nav" role="navigation" aria-label="Primary">
@@ -37,14 +37,22 @@
   <main>
     
 <section class="section white">
-  <div class="container">
+  <div class="container form">
     <h1>Contact</h1>
-    <p><strong>Email:</strong> info@ochococapital.com</p>
-    <p><strong>Address:</strong> 15100 SW Aquatic View Lane, Powell Butte, OR 97753</p>
-    <p><strong>Phone:</strong> (503) 444-0736</p>
-    <p>We’ll add a form later if needed.</p>
+    <p class="lead">Questions or inquiries? Send us a message and we’ll get back to you.</p>
+    <form method="post" action="#" onsubmit="event.preventDefault(); this.reset(); alert('Thanks — your message has been recorded locally. Connect a backend to send emails.');">
+      <label for="name">Name</label><br>
+      <input id="name" name="name" class="input" type="text" required><br><br>
+      <label for="email">Email</label><br>
+      <input id="email" name="email" class="input" type="email" required><br><br>
+      <label for="message">Message</label><br>
+      <textarea id="message" name="message" class="input" required></textarea><br><br>
+      <button class="button" type="submit">Send</button>
+    </form>
   </div>
 </section>
+<section class="section light"><div class="container"></div></section>
+<section class="section dark"><div class="container"></div></section>
 
   </main>
   
